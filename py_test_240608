@@ -1,0 +1,57 @@
+step = 0
+while True:
+    if step == 0:
+        print("(Q) 삼각형 = t, 사각형 = r을 입력하세요")
+        user_input = input()
+        step = 1
+    elif step == 1:
+        print("(Q) 가로(밑변)과 세로(높이)를 입력하세요.")
+        #width = float(input)
+        width, length = input().split() 
+        step = 2
+    elif step == 2:
+        base_type = "int"
+        if user_input == "t":
+            if len(width.split(".")) > 1:
+                width = float(width)
+                base_type = "float"
+            else:
+                width = int(width)
+            if len(length.split(".")) > 1:
+                length = float(length)
+                base_type = "float"
+            else:
+                length = int(length)
+            if base_type == "float":
+                print(f"삼각형의 넓이는 {(width*length)/2:.5f}")
+            else:
+                if (width*length)%2 == 0:
+                    print(f"삼각형의 넓이는 {(width*length)//2}")
+                else:
+                    print(f"삼각형의 넓이는 {(width*length)/2:.5f}")
+        elif user_input == "r":
+            if len(width.split(".")) > 1:
+                width = float(width)
+                base_type = "float"
+            else:
+                width = int(width)
+            if len(length.split(".")) > 1:
+                length = float(length)
+                base_type = "float"
+            else:
+                length = int(length)
+            if base_type == "float":
+                print(f"사각형의 넓이는 {(width*length):.5f}")
+            else:
+                print(f"사각형의 넓이는 {(width*length)}")
+        step = 3
+    elif step == 3:
+        user_input = input("계속 하시겠습니까? y = yes, n = no")
+        step = 4
+    else :
+        if user_input == 'n':
+            print("프로그램 종료")
+            break
+        else:
+            step = 0
+            continue
