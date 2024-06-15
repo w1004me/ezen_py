@@ -1,0 +1,10 @@
+front_is_clear() : 로봇 앞에 벽이 있는지 확인
+right_is_clear() : 로봇 오른쪽에 벽이 있는지 확인
+left_is_clear() : 로봇 왼쪽에 벽이 있는지 확인
+on_beeper() : 로봇 현재 위치에 비퍼가 있는지 확인
+carries_beeper() : 로봇이 비퍼를 가지고 있는지 확인
+move() : 앞으로 한칸 이동
+turn_left() : 왼쪽으로 회전
+turn_off() : 종료
+pick_beeper() : 비퍼 줍기
+put_beeper() : 비퍼 내려놓기
